@@ -30,6 +30,22 @@
 ### 2. 🗃️ SQL Playground Tương Tác (DuckDB Engine)
 * **Hiệu năng vượt trội:** Tích hợp **DuckDB** - hệ quản trị cơ sở dữ liệu phân tích nhúng (Embedded Analytical Database) chạy trực tiếp trong bộ nhớ (In-memory), giúp truy vấn hàng triệu dòng dữ liệu chỉ trong vài mili-giây.
 * **Truy vấn tự do:** Trình soạn thảo SQL (SQL Query Editor) cho phép người dùng viết các câu lệnh SQL chuẩn để lọc, gộp nhóm, tính toán trực tiếp trên bảng `jobs`.
+
+#### 📊 Cấu trúc bảng dữ liệu `jobs`
+| Tên cột | Kiểu dữ liệu | Mô tả & Ví dụ minh họa |
+| :--- | :--- | :--- |
+| **`job_id`** | TEXT | Mã định danh duy nhất của tin tuyển dụng (Ví dụ: `IT-0001`) |
+| **`job_title`** | TEXT | Tiêu đề tin tuyển dụng (Ví dụ: `Senior Python Backend Developer`) |
+| **`role_category`** | TEXT | Nhóm vai trò/vị trí chính (Ví dụ: `Python Backend Developer`, `Data Analyst`, `AI/ML Engineer`) |
+| **`skills`** | TEXT | Danh sách các kỹ năng/công nghệ yêu cầu, phân tách bằng dấu phẩy (Ví dụ: `Python, SQL, Pandas`) |
+| **`experience_years`** | INTEGER | Số năm kinh nghiệm làm việc tối thiểu yêu cầu (Ví dụ: `3`, `5`) |
+| **`salary_usd`** | INTEGER | Mức lương tháng (Đơn vị: USD, ví dụ: `1800`) |
+| **`location`** | TEXT | Địa điểm làm việc (Ví dụ: `Ho Chi Minh City`, `Ha Noi`, `Da Nang`, `Remote`) |
+| **`company_size`** | TEXT | Quy mô của công ty tuyển dụng (Ví dụ: `Small (Startup)`, `Medium (SME)`, `Large (Enterprise)`) |
+| **`job_type`** | TEXT | Loại hình hợp đồng lao động (Ví dụ: `Full-time`, `Contract`, `Internship`) |
+| **`work_mode`** | TEXT | Hình thức làm việc thực tế (Ví dụ: `On-site`, `Hybrid`, `Remote`) |
+| **`posted_date`** | DATE (TEXT) | Ngày tin tuyển dụng được đăng tải (Định dạng: `YYYY-MM-DD`, ví dụ: `2026-05-15`) |
+
 * **Mẫu truy vấn chuyên nghiệp:** Cung cấp sẵn các mẫu câu truy vấn hữu ích như:
   * Thống kê lương và số lượng tuyển dụng theo vai trò.
   * Top 10 công việc thu nhập cao nhất.
